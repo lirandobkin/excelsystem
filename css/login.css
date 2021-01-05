@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* change background color of body to gradient */
+body {
+    background: linear-gradient(90deg, #e66465, #9198e5);
+}
+
+/* style of login pane */
+.login-pane {
+    margin-top: 160px;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 480px;
+    height: 550px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* style of the login pane header */ 
+.login-pane header {
+    color: #4f4f4f;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+/* style of first text element in login pane (username text) */
+.login-pane p1 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    color: #4f4f4f;
+}
+
+/* style of second text element in login pane (username text) */
+.login-pane p2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    color: #4f4f4f;
+}
+
+/* location and size properties of input fields */
+.login-pane input{
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 440px;
+    margin-bottom: 50px;
+}
+
+/* style of username and password input fields */
+.login-pane input[type="username"], input[type="password"] {
+    border: none;
+    background: #c4c4c4;
+    height: 40px;
+    color: black;
+    padding: 0 20px;
+    outline: none;
+}
+
+/* style of login pane (login) button */
+.login-pane .btn {   
+    margin-top: 60px;
+    border: 2px solid #4f4f4f;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: #c4c4c4;
+}
+
+/* properties of when cursor is hovered over the button (login) */
+.login-pane button:hover {
+    color: white;
+    background-color: #4f4f4f;
+    transition: 0.6s;
+}
+
+/* style of the modal, invisible when scale is 0 */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+  
+/* sets modal to visible by setting scale to 1 */
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* style of modal header */
+.modal-header {
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+/* style of modal header title */
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4f4f4f;
+}
+
+/* style of modal header button (the close button) */
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* properties of when cursor is hovered over the button (close button) */
+.modal-header .close-button:hover {
+    color: red;
+    background: none;
+}
+
+/* style of modal body */
+.modal-body {
+    padding: 25px 25px;
+}
+
+/* style of dark overlay surrounding the modal, inactive when opacity is 0 */
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+/* activates overlay by setting opacity to 1 */
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
