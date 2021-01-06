@@ -19,6 +19,12 @@ body {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
+    transition-duration: 0.7s;
+    transition-property: opacity;
+}
+
+.login-pane .fade {
+    opacity: 0;
 }
 
 /* style of the login pane header */ 
@@ -51,7 +57,7 @@ body {
 /* location and size properties of input fields */
 .login-pane input{
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 440px;
     margin-bottom: 50px;
 }
