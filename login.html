@@ -7,14 +7,14 @@
     </head>
     <body>
         <div class="login-pane">
-            <form>
+            <form id="form-submit">
                 <header>Login Page</header>
                 <p1>Username</p1>
-                <input type="username" id="username-field" placeholder="Enter Username">
+                <input type="username" class="input-user" id="username-field" placeholder="Enter Username">
                 <p2>Password</p2>
-                <input type="password" id="password-field" placeholder="Enter Password">
-                <button data-modal-target="#modal" type="button" class="btn" onclick="login()">Login Now</button>
-                <div class="modal" id="modal">
+                <input type="password" class="input-pass" id="password-field" placeholder="Enter Password">
+                <button id="loginButton" type="button" class="btn">Login Now</button>
+                <!---<div class="modal" id="modal">
                     <div class="modal-header" id="modal-header">
                         <div class="title">Login Error</div>
                         <button data-close-button class="close-button">&times;</button>
@@ -23,7 +23,7 @@
                         Username or Password incorrect. Please try again!
                     </div>
                 </div>
-                <div id="overlay"></div>
+                <div id="overlay"></div>--->
             </form>
         </div>
         <script src="js/main.js"></script>
