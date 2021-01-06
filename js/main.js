@@ -7,8 +7,9 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 
-// function that is called on click of login button
-function login() {
+const loginButton = document.getElementById("loginButton");
+
+loginButton.addEventListener('click', () => {
     // Selecting the input element and get its value 
     var inputValUser = document.getElementById("username-field").value;
     var inputValPass = document.getElementById("password-field").value;
@@ -26,7 +27,7 @@ function login() {
     // else do the following
     else {
         // open modal the moment the button is clicked with incorrect credentials
-        openModalButtons.forEach(button => {
+        /*openModalButtons.forEach(button => {
             button.addEventListener('click', () => {
               const modal = document.querySelector(button.dataset.modalTarget);
               openModal(modal);
@@ -61,9 +62,9 @@ function login() {
             if (modal == null) return
             modal.classList.remove('active')
             overlay.classList.remove('active')
-        }
+        }*/
         // clear area for credentials so the user can try again
         document.getElementById("username-field").value = null;
         document.getElementById("password-field").value = null;
     }
-}
+});
